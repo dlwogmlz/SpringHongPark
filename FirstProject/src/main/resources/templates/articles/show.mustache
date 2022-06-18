@@ -1,0 +1,27 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Entity를 가져오는 방법 -> 모델에 등록된 데이터는 #을 통해서 가져올수 있다. -->
+    <!-- article에 있는 id, title, content를 출력한다. -->
+    {{#article}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{title}}</td>
+        <td>{{content}}</td>
+    </tr>
+    <!-- article을 어디까지 쓸것인가는 /로 끝맺는다. -->
+    {{/article}}
+    </tbody>
+</table>
+
+<a href="/articles">Go to Article List</a>
+
+{{>layouts/footer}}
